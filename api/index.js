@@ -22,6 +22,11 @@ app.use('/uploads',express.static(__dirname+'/uploads'));
 
 mongoose.connect('mongodb+srv://blog:blog2024@cluster0.t15vo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
+app.get('/hello', (req, res) => {
+  res.json({ message: 'Hello' });
+});
+
+
 app.post('/register',  async (req,res)=>{
     const {username, password} = req.body;
     if (password.length!=0){
