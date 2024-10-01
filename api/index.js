@@ -15,7 +15,7 @@ const uploadMiddleware = multer({dest:'uploads/'});
 const fs = require('fs');
 
 
-app.use(cors({credentials:true, origin:['http://localhost:3000', 'https://myblog-frontend-sand.vercel.app'], methods:["POST","GET"]}));
+app.use(cors({credentials:true, origin:['http://localhost:3000', 'https://myblog-frontend-sand.vercel.app/'], methods:["POST","GET"]}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads',express.static(__dirname+'/uploads'));
