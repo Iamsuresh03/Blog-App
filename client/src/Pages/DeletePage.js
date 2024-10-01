@@ -5,7 +5,7 @@ export default function DeletePage(){
     const [redirect, setRedirect] = useState(false);
     const {id} = useParams();
     useEffect(()=>{
-        const response =  fetch('http://localhost:4000/delete/'+id, {
+        const response =  fetch('https://myblog-rho-tan-22.vercel.app/delete/'+id, {
             method:'DELETE',
             headers:{
                 'Content-Type':'application/json'
